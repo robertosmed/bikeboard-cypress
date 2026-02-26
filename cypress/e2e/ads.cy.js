@@ -11,7 +11,7 @@ describe('Cadastro de Anúncio', () => {
     cy.fillAdForm(myBike)
     cy.submitAdForm()
 
-    cy.url().should('include', '/suceço')
+    cy.url().should('include', '/sucesso')
     cy.get('h3')
       .contains('Anúncio Enviado com Sucesso!')
       .should('be.visible')
