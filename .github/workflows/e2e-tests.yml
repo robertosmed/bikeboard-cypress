@@ -7,7 +7,7 @@ on:
          description: 'Escolha o ambiente para os testes(local,homolog,production)'
          required: true
          default: 'http://localhost:3000'
-        browser:
+       browser:
           description: 'Escolha o navegador para os testes'
           required: true
           default: 'chrome'
