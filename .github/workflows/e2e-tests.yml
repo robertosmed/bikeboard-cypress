@@ -7,6 +7,10 @@ on:
          description: 'Escolha o ambiente para os testes(local,homolog,production)'
          required: true
          default: 'http://localhost:3000'
+        browser:
+          description: 'Escolha o navegador para os testes'
+          required: true
+          default: 'chrome'
     
 jobs:
   tests:
@@ -21,7 +25,7 @@ jobs:
           BASE_URL: ${{ github.event.inputs.base_url }}
         with:
           start: npm start
-          browser: chrome
+          browser: ${{ github.event.inputs.browser }}
       
       - name: Upload screenshots
         uses: actions/upload-artifact@v4
